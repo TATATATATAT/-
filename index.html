@@ -1,6 +1,6 @@
+<!-- author:luoxuyang -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,52 +12,68 @@
         padding: 0;
         margin: 0;
     }
-    .main{
+
+    .main {
         margin: auto;
         width: 300px;
     }
-    h1{
+
+    h1 {
         text-align: center;
-        
+        font-weight: lighter;
+
     }
+
     #content {
         width: 300px;
         text-indent: 20px;
         margin-bottom: 20px;
     }
-    input{
+
+    input {
         width: 300px;
         height: 40px;
         border: 1px solid #ddd;
         margin-top: 20px;
         text-indent: 10px;
     }
-    #create{    
+
+    #create {
         width: 100px;
         height: 30px;
         text-align: center;
         line-height: 30px;
-        margin:auto;
+        margin: auto;
         color: #fff;
         user-select: none;
         background-color: #f60;
         cursor: pointer;
+    }
+
+    #reason {
+        margin-bottom: 20px;
+    }
+    .copyright{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
     }
 </style>
 
 <body>
     <div class="main">
         <h1>营销号生成器</h1>
-    <div><input type="text" id="name" placeholder="名字（黄瓜）"></div>
-    <div><input type="text" id="action" placeholder="事件（能吃）" ></div>
-    <div><input type="text" id="reason" placeholder="原因（是水果）"></div>
-    <div id="content">　　　　
-        <div> 黄瓜能吃是怎么回事呢？黄瓜相信大家都很熟悉，但是黄瓜能吃是怎么回事呢，下面就让小编带大家一起了解吧。</div>
-        　　<div>黄瓜能吃，其实就是水果，大家可能会很惊讶黄瓜怎么会能吃呢？但事实就是这样，小编也感到非常惊讶。</div>
-        　　<div>这就是关于黄瓜能吃的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</div>
+        <div><input type="text" id="name" placeholder="名字（黄瓜）"></div>
+        <div><input type="text" id="action" placeholder="事件（能吃）"></div>
+        <div><input type="text" id="reason" placeholder="原因（是水果）"></div>
+        <div id="content">　　　　
+            <div> 黄瓜能吃是怎么回事呢？黄瓜相信大家都很熟悉，但是黄瓜能吃是怎么回事呢，下面就让小编带大家一起了解吧。</div>
+            　　<div>黄瓜能吃，其实就是水果，大家可能会很惊讶黄瓜怎么会能吃呢？但事实就是这样，小编也感到非常惊讶。</div>
+            　　<div>这就是关于黄瓜能吃的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</div>
+        </div>
+        <div id="create">生成</div>
     </div>
-    <div id="create">生成</div>
-    </div>
+    <div class="copyright">by:LXY</div>
 </body>
 <script>
 
@@ -66,7 +82,7 @@
         const name = $('#name').val();
         const action = $('#action').val();
         const reason = $('#reason').val();
-        if(!name||!action||!reason)return;
+        if (!name || !action || !reason) return;
         const str = `<div> ${name}${action}是怎么回事呢？${name}相信大家都很熟悉，但是${name}${action}是怎么回事呢，下面就让小编带大家一起了解吧。</div>
         　　<div>${name}${action}，其实就是${reason}，大家可能会很惊讶${name}怎么会${action}呢？但事实就是这样，小编也感到非常惊讶。</div>
         　　<div>这就是关于${name}${action}的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</div>`;
